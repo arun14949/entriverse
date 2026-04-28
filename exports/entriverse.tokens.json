@@ -1290,7 +1290,29 @@
         "hex": "#ffffff"
       }
     },
-    "primary-container": {
+    "entri-blue": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.537,
+          1
+        ],
+        "hex": "#0089ff"
+      }
+    },
+    "on-blue": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#ffffff"
+      }
+    },
+    "blue-container": {
       "$value": {
         "colorSpace": "srgb",
         "components": [
@@ -1301,7 +1323,7 @@
         "hex": "#e6f3ff"
       }
     },
-    "on-primary-container": {
+    "on-blue-container": {
       "$value": {
         "colorSpace": "srgb",
         "components": [
@@ -1312,7 +1334,7 @@
         "hex": "#004b8c"
       }
     },
-    "primary-hover": {
+    "blue-hover": {
       "$value": {
         "colorSpace": "srgb",
         "components": [
@@ -1321,17 +1343,6 @@
           0.549
         ],
         "hex": "#004b8c"
-      }
-    },
-    "entri-blue": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0,
-          0.537,
-          1
-        ],
-        "hex": "#0089ff"
       }
     },
     "entri-green": {
@@ -1664,7 +1675,7 @@
         "hex": "#74570a"
       }
     },
-    "background": {
+    "background-default": {
       "$value": {
         "colorSpace": "srgb",
         "components": [
@@ -1686,7 +1697,7 @@
         "hex": "#f0f0f0"
       }
     },
-    "surface-primary": {
+    "primary-container": {
       "$value": {
         "colorSpace": "srgb",
         "components": [
@@ -1697,7 +1708,7 @@
         "hex": "#ffffff"
       }
     },
-    "surface-secondary": {
+    "secondary-container": {
       "$value": {
         "colorSpace": "srgb",
         "components": [
@@ -1741,7 +1752,7 @@
         "hex": "#0061b5"
       }
     },
-    "inverted-bg": {
+    "inverted-bg-default": {
       "$value": {
         "colorSpace": "srgb",
         "components": [

@@ -2,6 +2,44 @@
 
 All notable changes to EntriVerse are documented here. Format follows [Keep a Changelog](https://keepachangelog.com).
 
+## [1.0.0] - 2026-04-28
+
+Realign reference-token names and structure with the EntriVerse Figma source-of-truth (`KjZWlCkNvEKuOnfPMXxqS9`). **Breaking change** — anything consuming the old token names must update.
+
+### Changed
+
+- `surface-primary` → `primary-container` (still pure-white in Light Mode; matches Figma `Surface/primary-container`).
+- `surface-secondary` → `secondary-container` (matches Figma `Surface/secondary-container`).
+- `background` → `background-default` (matches Figma `Surface/background-default`).
+- `inverted-bg` → `inverted-bg-default` (matches Figma `Surface/inverted-bg-default`).
+- The tonal-blue container was previously called `primary-container` (`blue-50`). It is now `blue-container`, part of the Entri Blue family.
+- The corresponding text and hover tokens renamed: `on-primary-container` → `on-blue-container`, `primary-hover` → `blue-hover`.
+- Component tokens that referenced any of the above were updated to point at the new names. Light/Dark values are unchanged.
+
+### Added
+
+- `on-blue: pure-white` reference token, completing the Entri Blue family so it mirrors every other accent (`on-green`, `on-purple`, etc.). Matches Figma `Entri Blue/on-blue`.
+
+### Removed
+
+- `surface-primary`, `surface-secondary`, `background`, `inverted-bg`, `on-primary-container`, `primary-hover` — all replaced by the renamed tokens above. The previous `primary-container` (which meant the tonal-blue container) is replaced by `blue-container`.
+
+### Migration
+
+Search-and-replace in product code:
+
+| Old | New |
+|---|---|
+| `surface-primary` | `primary-container` |
+| `surface-secondary` | `secondary-container` |
+| `background` (the reference token, not the CSS property) | `background-default` |
+| `inverted-bg` | `inverted-bg-default` |
+| `primary-container` (when it meant tonal blue) | `blue-container` |
+| `on-primary-container` | `on-blue-container` |
+| `primary-hover` | `blue-hover` |
+
+`primary` and `on-primary` are unchanged.
+
 ## [0.1.0] - 2026-04-28
 
 Initial spec.

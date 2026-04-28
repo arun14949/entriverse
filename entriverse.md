@@ -144,11 +144,12 @@ colors:
 
   primary: "{colors.blue-700}"
   on-primary: "{colors.pure-white}"
-  primary-container: "{colors.blue-50}"
-  on-primary-container: "{colors.blue-800}"
-  primary-hover: "{colors.blue-800}"
 
   entri-blue: "{colors.blue-500}"
+  on-blue: "{colors.pure-white}"
+  blue-container: "{colors.blue-50}"
+  on-blue-container: "{colors.blue-800}"
+  blue-hover: "{colors.blue-800}"
 
   entri-green: "{colors.green-500}"
   on-green: "{colors.pure-white}"
@@ -186,14 +187,14 @@ colors:
   on-gold-container: "{colors.gold-800}"
   gold-hover: "{colors.gold-800}"
 
-  background: "{colors.pure-white}"
+  background-default: "{colors.pure-white}"
   background-grey: "{colors.grey-30}"
-  surface-primary: "{colors.pure-white}"
-  surface-secondary: "{colors.grey-20}"
+  primary-container: "{colors.pure-white}"
+  secondary-container: "{colors.grey-20}"
   surface-outline: "{colors.grey-30}"
   surface-outline-disabled: "{colors.grey-10}"
   surface-blue-outline: "{colors.blue-700}"
-  inverted-bg: "{colors.grey-1400}"
+  inverted-bg-default: "{colors.grey-1400}"
   inverted-bg-grey: "{colors.grey-1100}"
 
   text-primary: "{colors.grey-1000}"
@@ -310,43 +311,43 @@ components:
     typography: "{typography.button}"
     padding: 12px
   button-filled-hover:
-    backgroundColor: "{colors.primary-hover}"
+    backgroundColor: "{colors.blue-hover}"
     textColor: "{colors.on-primary}"
   button-filled-disabled:
     backgroundColor: "{colors.background-grey}"
     textColor: "{colors.text-disabled}"
 
   button-tonal:
-    backgroundColor: "{colors.primary-container}"
-    textColor: "{colors.on-primary-container}"
+    backgroundColor: "{colors.blue-container}"
+    textColor: "{colors.on-blue-container}"
     rounded: "{rounded.full}"
     typography: "{typography.button}"
     padding: 12px
   button-tonal-hover:
     backgroundColor: "{colors.blue-100}"
-    textColor: "{colors.on-primary-container}"
+    textColor: "{colors.on-blue-container}"
   button-tonal-disabled:
     backgroundColor: "{colors.background-grey}"
     textColor: "{colors.text-disabled}"
 
   button-outlined:
-    backgroundColor: "{colors.background}"
-    textColor: "{colors.on-primary-container}"
+    backgroundColor: "{colors.background-default}"
+    textColor: "{colors.on-blue-container}"
     rounded: "{rounded.full}"
     typography: "{typography.button}"
     padding: 12px
   button-outlined-hover:
-    backgroundColor: "{colors.primary-container}"
-    textColor: "{colors.on-primary-container}"
+    backgroundColor: "{colors.blue-container}"
+    textColor: "{colors.on-blue-container}"
 
   button-secondary-outlined:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.full}"
     typography: "{typography.button}"
     padding: 12px
   button-secondary-outlined-hover:
-    backgroundColor: "{colors.surface-secondary}"
+    backgroundColor: "{colors.secondary-container}"
     textColor: "{colors.text-primary}"
 
   button-destructive:
@@ -377,7 +378,7 @@ components:
     padding: 12px
   button-text-hover:
     backgroundColor: "{colors.blue-100}"
-    textColor: "{colors.on-primary-container}"
+    textColor: "{colors.on-blue-container}"
 
   fab:
     backgroundColor: "{colors.primary}"
@@ -385,35 +386,35 @@ components:
     rounded: "{rounded.l}"
     typography: "{typography.button}"
   fab-hover:
-    backgroundColor: "{colors.primary-hover}"
+    backgroundColor: "{colors.blue-hover}"
     textColor: "{colors.on-primary}"
 
   input:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.s}"
     typography: "{typography.body-default}"
     padding: 12px
   input-focused:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-primary}"
   input-error:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-primary}"
   input-success:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-primary}"
   input-disabled:
     backgroundColor: "{colors.surface-outline-disabled}"
     textColor: "{colors.text-disabled}"
 
   card:
-    backgroundColor: "{colors.surface-primary}"
+    backgroundColor: "{colors.primary-container}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.m}"
     padding: 16px
   card-secondary:
-    backgroundColor: "{colors.surface-secondary}"
+    backgroundColor: "{colors.secondary-container}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.m}"
     padding: 16px
@@ -422,32 +423,32 @@ components:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
   radio-active-hover:
-    backgroundColor: "{colors.primary-hover}"
+    backgroundColor: "{colors.blue-hover}"
     textColor: "{colors.on-primary}"
   radio-inactive:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.grey-50}"
   radio-inactive-hover:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.grey-80}"
   radio-disabled:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-disabled}"
 
   checkbox-active:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
   checkbox-active-hover:
-    backgroundColor: "{colors.primary-hover}"
+    backgroundColor: "{colors.blue-hover}"
     textColor: "{colors.on-primary}"
   checkbox-inactive:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.grey-50}"
   checkbox-inactive-hover:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.grey-80}"
   checkbox-disabled:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-disabled}"
 
   switch-active:
@@ -459,7 +460,7 @@ components:
     textColor: "{colors.fixed-white}"
     rounded: "{rounded.full}"
   switch-inactive:
-    backgroundColor: "{colors.primary-container}"
+    backgroundColor: "{colors.blue-container}"
     textColor: "{colors.grey-80}"
     rounded: "{rounded.full}"
   switch-disabled:
@@ -468,11 +469,11 @@ components:
     rounded: "{rounded.full}"
 
   selection-active:
-    backgroundColor: "{colors.primary-container}"
+    backgroundColor: "{colors.blue-container}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.m}"
   selection-inactive:
-    backgroundColor: "{colors.surface-secondary}"
+    backgroundColor: "{colors.secondary-container}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.m}"
   selection-disabled:
@@ -485,34 +486,34 @@ components:
     rounded: "{rounded.m}"
 
   nav-bar:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.none}"
   nav-icon-active:
-    backgroundColor: "{colors.primary-container}"
+    backgroundColor: "{colors.blue-container}"
     textColor: "{colors.primary}"
     rounded: "{rounded.full}"
   nav-icon-inactive:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.grey-80}"
 
   tab-active:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.none}"
     typography: "{typography.body-default-medium}"
   tab-inactive:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.grey-80}"
     typography: "{typography.body-default}"
 
   segmented-active:
-    backgroundColor: "{colors.primary-container}"
-    textColor: "{colors.on-primary-container}"
+    backgroundColor: "{colors.blue-container}"
+    textColor: "{colors.on-blue-container}"
     rounded: "{rounded.s}"
     typography: "{typography.button}"
   segmented-inactive:
-    backgroundColor: "{colors.background}"
+    backgroundColor: "{colors.background-default}"
     textColor: "{colors.text-primary}"
     rounded: "{rounded.s}"
     typography: "{typography.button}"
@@ -529,7 +530,7 @@ components:
     textColor: "{colors.fixed-white}"
     rounded: "{rounded.full}"
   slider-track-inactive:
-    backgroundColor: "{colors.primary-container}"
+    backgroundColor: "{colors.blue-container}"
     textColor: "{colors.grey-80}"
     rounded: "{rounded.full}"
   slider-handle:
@@ -541,14 +542,14 @@ components:
     textColor: "{colors.grey-1000}"
 
   snackbar:
-    backgroundColor: "{colors.inverted-bg}"
+    backgroundColor: "{colors.inverted-bg-default}"
     textColor: "{colors.text-inverted}"
     rounded: "{rounded.s}"
     typography: "{typography.body-default}"
     padding: 12px
 
   tooltip:
-    backgroundColor: "{colors.inverted-bg}"
+    backgroundColor: "{colors.inverted-bg-default}"
     textColor: "{colors.text-inverted}"
     rounded: "{rounded.s}"
     typography: "{typography.caption}"
@@ -604,9 +605,11 @@ EntriVerse has a two-tier color identity: a single interaction color and an expr
 
 **Interaction is always blue.** `primary` maps to `blue-700` (`#0061B5`). It drives filled CTA buttons, active radios and checkboxes, progress indicators, link text, and focused input outlines. `entri-blue` maps to `blue-500` (`#0089FF`) — the identity color for logos, switch tracks, and the input cursor. The identity blue is brighter and does not pass AA as a filled background with white text, so never use it for filled CTAs.
 
-**The accent palette** has seven colors: blue, plus six expressive accents (green, purple, orange, yellow, brown, gold) and a supplementary turquoise for data visualization. Each accent has the same token shape — a main (`entri-green`), an on-color (`on-green`), a container (`green-container`), an on-container (`on-green-container`), and a hover (`green-hover`).
+**The accent palette** has seven colors: blue, plus six expressive accents (green, purple, orange, yellow, brown, gold) and a supplementary turquoise for data visualization. Each accent has the same token shape — a main (`entri-blue`, `entri-green`), an on-color (`on-blue`, `on-green`), a container (`blue-container`, `green-container`), an on-container (`on-blue-container`, `on-green-container`), and a hover (`blue-hover`, `green-hover`).
 
-**Surfaces are layered tonally.** `background` is pure white. `background-grey` is used when cards need separation from the page. `surface-secondary` is for elevated containers. `inverted-bg` is near-black, used for snackbars and tooltips even in Light Mode so they float above all surfaces.
+**Surfaces are layered tonally.** `background-default` is pure white. `background-grey` is used when cards need separation from the page. `primary-container` is the main surface fill (also pure white in Light Mode); `secondary-container` is for elevated containers (grey). `inverted-bg-default` is near-black, used for snackbars and tooltips even in Light Mode so they float above all surfaces.
+
+Note that `primary-container` is a **surface** token — it is *not* the tonal-blue fill used by tonal buttons or selection highlights. That fill is `blue-container` (`blue-50` in Light Mode), part of the Entri Blue family alongside `entri-blue`, `on-blue`, `on-blue-container`, and `blue-hover`. Each accent palette (`green`, `purple`, `orange`, etc.) follows the same shape.
 
 **Text is a six-tier hierarchy.** `text-primary` for titles and highlighted copy, `text-subtext` for body paragraphs, `text-placeholder` for input placeholders, `text-timestamp` for metadata that should recede below subtext, `text-disabled` for non-actionable content, `text-inverted` for text over non-background surfaces.
 
@@ -645,9 +648,9 @@ Stay on the scale. 10px, 14px, 20px are not EntriVerse values.
 
 EntriVerse uses **Material 2 elevation**. Nine levels (`0, 1, 2, 4, 6, 8, 12, 16, 24`) corresponding to Material 2 dp values, each composed of three layered drop shadows for natural depth. Both Light and Dark modes have the full ladder.
 
-Pick a level by Material 2 convention: cards at Level 1, raised surfaces and selection states at Level 2, FABs and snackbars at Level 6, navigation drawers and side sheets at Level 16, modal dialogs at Level 24. Do not drop heavy shadows on inline cards to add visual importance — use `surface-secondary` fill or a border instead.
+Pick a level by Material 2 convention: cards at Level 1, raised surfaces and selection states at Level 2, FABs and snackbars at Level 6, navigation drawers and side sheets at Level 16, modal dialogs at Level 24. Do not drop heavy shadows on inline cards to add visual importance — use `secondary-container` fill or a border instead.
 
-Tooltips and snackbars use `inverted-bg` (`#121212`) even in Light Mode to float cleanly above any surface layer.
+Tooltips and snackbars use `inverted-bg-default` (`#121212`) even in Light Mode to float cleanly above any surface layer.
 
 ## Shapes
 
@@ -669,13 +672,13 @@ Do not mix radius families within a visual group. A button (`full`) inside a car
 
 **Tags** come in six color variants. Each uses the 700-level dark variant of its accent (blue-700, green-700, purple-700, red-700) with white text for AA contrast. Orange is the exception — it uses the 500 with dark text.
 
-**Segmented buttons** live between tabs and chips — used when the choice persists like a filter. Active uses `primary-container`, inactive is transparent with text-primary.
+**Segmented buttons** live between tabs and chips — used when the choice persists like a filter. Active uses `blue-container`, inactive is transparent with text-primary.
 
 **Progress and slider** tracks use `entri-blue` for the active fill. Sliders use `rounded.full`. Progress bars use the overlay system for their inactive track (20% black).
 
 ## Dark Mode
 
-The three-tier cascade lets dark mode live as a small set of reference token overrides. Component definitions do not change. They reference semantic tokens like `{colors.primary}` and `{colors.background}`, so remapping those tokens once flips the entire system.
+The three-tier cascade lets dark mode live as a small set of reference token overrides. Component definitions do not change. They reference semantic tokens like `{colors.primary}` and `{colors.background-default}`, so remapping those tokens once flips the entire system.
 
 Apply these overrides on top of the front matter values when rendering Dark Mode. Anything not listed below stays at its Light Mode value (this includes all global primitives, the typography scale, the spacing scale, the corner radius scale, and every component definition).
 
@@ -686,11 +689,12 @@ Apply these overrides on top of the front matter values when rendering Dark Mode
 # Brand & action — hierarchy inverts on dark surfaces
 primary: "{colors.blue-200}"
 on-primary: "{colors.blue-900}"
-primary-container: "{colors.blue-900}"
-on-primary-container: "{colors.blue-100}"
-primary-hover: "{colors.blue-300}"
 
 entri-blue: "{colors.blue-400}"
+on-blue: "{colors.blue-900}"
+blue-container: "{colors.blue-900}"
+on-blue-container: "{colors.blue-100}"
+blue-hover: "{colors.blue-300}"
 
 # Accent palette — each main shifts up to its 400, containers go to 900
 entri-green: "{colors.green-400}"
@@ -730,14 +734,14 @@ on-gold-container: "{colors.gold-100}"
 gold-hover: "{colors.gold-300}"
 
 # Surfaces — Material Dark standard, near-black backgrounds with lifted cards
-background: "{colors.grey-1400}"
+background-default: "{colors.grey-1400}"
 background-grey: "{colors.pure-black}"
-surface-primary: "{colors.grey-1100}"
-surface-secondary: "{colors.grey-1200}"
+primary-container: "{colors.grey-1100}"
+secondary-container: "{colors.grey-1200}"
 surface-outline: "{colors.grey-600}"
 surface-outline-disabled: "{colors.grey-1300}"
 surface-blue-outline: "{colors.blue-200}"
-inverted-bg: "{colors.grey-10}"
+inverted-bg-default: "{colors.grey-10}"
 inverted-bg-grey: "{colors.grey-20}"
 
 # Text — full hierarchy inverts
@@ -823,6 +827,6 @@ Material 2 shadow values do not change between modes. The perceived effect is so
 - Do stay on the spacing scale. 10px, 14px, 22px are not EntriVerse values.
 - Don't invent new color tokens. If a needed shade is missing, the system is the gap, not the component.
 - Do pick elevation by Material 2 purpose. Card at Level 1, FAB at Level 6, dialog at Level 24.
-- Don't drop heavy shadows on inline cards to add importance. Use `surface-secondary` or a border instead.
+- Don't drop heavy shadows on inline cards to add importance. Use `secondary-container` or a border instead.
 - Do use the overlay system for scrims and washes. Do not hand-write `rgba(0,0,0,0.5)`.
 - Do target WCAG AA (4.5:1) for all text.
