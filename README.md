@@ -39,7 +39,7 @@ Install the skill once. The AI then knows the system without you pasting it into
 **Personal install (works across all your repos):**
 
 ```bash
-git clone https://github.com/YOUR-ORG/entriverse.git ~/entriverse
+git clone https://github.com/arun14949/entriverse.git ~/entriverse
 mkdir -p ~/.claude/skills
 cp -r ~/entriverse/skill ~/.claude/skills/entriverse
 ```
@@ -49,7 +49,7 @@ cp -r ~/entriverse/skill ~/.claude/skills/entriverse
 From inside the Entri product repo:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/YOUR-ORG/entriverse/main/scripts/install-in-repo.sh | bash
+curl -sL https://raw.githubusercontent.com/arun14949/entriverse/main/scripts/install-in-repo.sh | bash
 git add .claude/skills/entriverse
 git commit -m "Add EntriVerse skill"
 ```

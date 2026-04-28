@@ -3,7 +3,7 @@
 # Run from the root of the consuming repo.
 #
 # Direct usage:
-#   curl -sL https://raw.githubusercontent.com/YOUR-ORG/entriverse/main/scripts/install-in-repo.sh | bash
+#   curl -sL https://raw.githubusercontent.com/arun14949/entriverse/main/scripts/install-in-repo.sh | bash
 #
 # Or from a local clone:
 #   /path/to/entriverse/scripts/install-in-repo.sh
@@ -11,7 +11,7 @@
 set -e
 
 # Allow override via env var. Default to the canonical repo URL.
-ENTRIVERSE_REPO="${ENTRIVERSE_REPO:-https://github.com/YOUR-ORG/entriverse.git}"
+ENTRIVERSE_REPO="${ENTRIVERSE_REPO:-https://github.com/arun14949/entriverse.git}"
 ENTRIVERSE_BRANCH="${ENTRIVERSE_BRANCH:-main}"
 
 if [ ! -d ".git" ]; then
