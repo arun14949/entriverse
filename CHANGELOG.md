@@ -2,6 +2,65 @@
 
 All notable changes to EntriVerse are documented here. Format follows [Keep a Changelog](https://keepachangelog.com).
 
+## [2.0.0] - 2026-04-28
+
+Sweeping realignment with the EntriVerse Figma source-of-truth (file `KjZWlCkNvEKuOnfPMXxqS9`, Kigen variables export). Two structural changes — both **breaking**.
+
+### Changed — Typography rewrite
+
+The typography block now mirrors Figma's 56-style `Typescale/*` taxonomy. Names follow `<tier>-<sans|serif>-<size>[-bold]`. Existing names that didn't fit the pattern are renamed; missing serif variants for Display and Heading are added; missing medium-weight variants for Body and Paragraph are added.
+
+Token name changes (full migration table):
+
+| Old | New |
+|---|---|
+| `display-xl` / `display-xl-bold` | `display-sans-xlarge` / `display-sans-xlarge-bold` |
+| `display-lg` / `display-lg-bold` | `display-sans-large` / `display-sans-large-bold` |
+| `display-sm` / `display-sm-bold` | `display-sans-small` / `display-sans-small-bold` |
+| `heading-xl` / `heading-xl-bold` | `heading-sans-xlarge` / `heading-sans-xlarge-bold` |
+| `heading-lg` / `heading-lg-bold` | `heading-sans-large` / `heading-sans-large-bold` |
+| `heading-sm` / `heading-sm-bold` | `heading-sans-small` / `heading-sans-small-bold` |
+| `subtitle-lg` | (removed — use `body-large-bold` instead) |
+| `paragraph-lg` / `paragraph-lg-bold` | `body-large-para` / `body-large-para-bold` |
+| `paragraph-default` / `paragraph-default-bold` | `body-para` / `body-para-bold` |
+| `paragraph-serif` / `paragraph-serif-bold` | `body-serif-para` / `body-serif-para-bold` |
+| `caption-paragraph` | `caption-para` |
+| `caption-paragraph-small` | `caption-small-para` |
+| `body-lg` / `body-lg-medium` / `body-lg-bold` | `body-large` / `body-large-medium` / `body-large-bold` |
+| `body-default-medium` / `body-default-bold` | `body-medium` / `body-bold` |
+| `caption` | `caption-default` |
+| `caption-sm` | `caption-small` |
+| `button` | `button-default` |
+
+Value drift fixes — Figma uses `700` for sans bold weights where our spec previously used `600`. Affected tokens: `display-sans-large-bold`, `display-sans-xlarge-bold`, `display-sans-small-bold`, `body-large-bold`, `body-bold`, `body-para-bold`, `body-large-para-bold`. Heading `large` and `xlarge` line-height corrected from 1.25 to 1.2.
+
+Added — Display and Heading serif variants (`display-serif-*`, `heading-serif-*`) for editorial layouts. Added `body-serif-medium`, `body-serif-large`, `body-serif-large-medium`, `body-serif-large-bold`. Added `caption-para-medium`, `caption-small-para-medium`, `caption-small-para-bold`.
+
+### Changed — Reference token name flips
+
+Reference tokens that previously used a `<category>-<role>` prefix now follow Figma's `<role>-<category>` flat naming. Same values, new names.
+
+| Old | New |
+|---|---|
+| `text-primary` | `primary-text` |
+| `text-subtext` | `subtext` |
+| `text-placeholder` | `placeholder-text` |
+| `text-timestamp` | `timestamp-text` |
+| `text-inverted` | `inverted-text` |
+| `text-disabled` | `disabled-text` |
+| `text-link` / `text-link-hover` / `text-link-visited` | `link-text` / `link-text-hover` / `link-text-visited` |
+| `icon-default` / `icon-secondary` / `icon-inverted` / `icon-placeholder` / `icon-disabled` | `default-icon` / `secondary-icon` / `inverted-icon` / `placeholder-icon` / `disabled-icon` |
+| `icon-blue` / `green` / `purple` / `orange` / `yellow` / `brown` / `gold` | `blue-icon` / `green-icon` / etc. |
+| `error` | `error-color` |
+| `error-text` | `error-text-color` |
+| `error-outline` | `error-outline-color` |
+| `success` | `success-color` |
+| `success-text` | `success-text-color` |
+| `success-outline` | `success-outline-color` |
+| `surface-blue-outline` | `blue-outline` |
+
+`primary` and `on-primary` are unchanged — kept as the EntriVerse abstraction for the filled-CTA color path. Their values map to the same primitives Figma uses for `button-filled-default`.
+
 ## [1.1.0] - 2026-04-28
 
 Replace the Material 2 elevation ladder with EntriVerse's own shadow scale, extracted directly from the Figma effect styles.

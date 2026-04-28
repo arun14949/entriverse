@@ -160,41 +160,41 @@
         "secondary-container": "#f6f6f6",
         "surface-outline": "#f0f0f0",
         "surface-outline-disabled": "#fafafa",
-        "surface-blue-outline": "#0061b5",
+        "blue-outline": "#0061b5",
         "inverted-bg-default": "#121212",
         "inverted-bg-grey": "#1e1e1e",
-        "text-primary": "#212121",
-        "text-subtext": "#616161",
-        "text-placeholder": "#949494",
-        "text-timestamp": "#b2b2b2",
-        "text-inverted": "#f0f0f0",
-        "text-disabled": "#cfcfcf",
-        "text-link": "#0061b5",
-        "text-link-hover": "#004b8c",
-        "text-link-visited": "#5a2c6c",
-        "icon-default": "#212121",
-        "icon-secondary": "#757575",
-        "icon-inverted": "#f0f0f0",
-        "icon-placeholder": "#b2b2b2",
-        "icon-disabled": "#cfcfcf",
-        "icon-blue": "#0089ff",
-        "icon-green": "#00805c",
-        "icon-purple": "#7f3e98",
-        "icon-orange": "#ffa000",
-        "icon-yellow": "#ffd428",
-        "icon-brown": "#be7967",
-        "icon-gold": "#d29f13",
-        "error": "#f65a5b",
+        "primary-text": "#212121",
+        "subtext": "#616161",
+        "placeholder-text": "#949494",
+        "timestamp-text": "#b2b2b2",
+        "inverted-text": "#f0f0f0",
+        "disabled-text": "#cfcfcf",
+        "link-text": "#0061b5",
+        "link-text-hover": "#004b8c",
+        "link-text-visited": "#5a2c6c",
+        "default-icon": "#212121",
+        "secondary-icon": "#757575",
+        "inverted-icon": "#f0f0f0",
+        "placeholder-icon": "#b2b2b2",
+        "disabled-icon": "#cfcfcf",
+        "blue-icon": "#0089ff",
+        "green-icon": "#00805c",
+        "purple-icon": "#7f3e98",
+        "orange-icon": "#ffa000",
+        "yellow-icon": "#ffd428",
+        "brown-icon": "#be7967",
+        "gold-icon": "#d29f13",
+        "error-color": "#f65a5b",
         "on-error": "#ffffff",
-        "error-text": "#f65a5b",
-        "error-outline": "#873232",
+        "error-text-color": "#f65a5b",
+        "error-outline-color": "#873232",
         "error-container": "#feefef",
         "on-error-container": "#873232",
         "error-hover": "#873232",
-        "success": "#00805c",
+        "success-color": "#00805c",
         "on-success": "#ffffff",
-        "success-text": "#00805c",
-        "success-outline": "#004633",
+        "success-text-color": "#00805c",
+        "success-outline-color": "#004633",
         "success-container": "#e6f2ef",
         "on-success-container": "#004633",
         "success-hover": "#004633",
@@ -203,91 +203,115 @@
         "fixed-pure-black": "#000000"
       },
       "fontFamily": {
-        "display-xl": [
+        "display-sans-small": [
           "Inter"
         ],
-        "display-xl-bold": [
+        "display-sans-small-bold": [
           "Inter"
         ],
-        "display-lg": [
+        "display-sans-large": [
           "Inter"
         ],
-        "display-lg-bold": [
+        "display-sans-large-bold": [
           "Inter"
         ],
-        "display-sm": [
+        "display-sans-xlarge": [
           "Inter"
         ],
-        "display-sm-bold": [
+        "display-sans-xlarge-bold": [
           "Inter"
         ],
-        "heading-xl": [
-          "Inter"
-        ],
-        "heading-xl-bold": [
-          "Inter"
-        ],
-        "heading-lg": [
-          "Inter"
-        ],
-        "heading-lg-bold": [
-          "Inter"
-        ],
-        "heading-sm": [
-          "Inter"
-        ],
-        "heading-sm-bold": [
-          "Inter"
-        ],
-        "subtitle-lg": [
-          "Inter"
-        ],
-        "paragraph-lg": [
-          "Inter"
-        ],
-        "paragraph-lg-bold": [
-          "Inter"
-        ],
-        "paragraph-default": [
-          "Inter"
-        ],
-        "paragraph-default-bold": [
-          "Inter"
-        ],
-        "paragraph-serif": [
+        "display-serif-small": [
           "Noto Serif"
         ],
-        "paragraph-serif-bold": [
+        "display-serif-small-bold": [
           "Noto Serif"
         ],
-        "caption-paragraph": [
+        "display-serif-large": [
+          "Noto Serif"
+        ],
+        "display-serif-large-bold": [
+          "Noto Serif"
+        ],
+        "display-serif-xlarge": [
+          "Noto Serif"
+        ],
+        "display-serif-xlarge-bold": [
+          "Noto Serif"
+        ],
+        "heading-sans-small": [
           "Inter"
         ],
-        "caption-paragraph-small": [
+        "heading-sans-small-bold": [
           "Inter"
         ],
-        "body-lg": [
+        "heading-sans-large": [
           "Inter"
         ],
-        "body-lg-medium": [
+        "heading-sans-large-bold": [
           "Inter"
         ],
-        "body-lg-bold": [
+        "heading-sans-xlarge": [
           "Inter"
+        ],
+        "heading-sans-xlarge-bold": [
+          "Inter"
+        ],
+        "heading-serif-small": [
+          "Noto Serif"
+        ],
+        "heading-serif-small-bold": [
+          "Noto Serif"
+        ],
+        "heading-serif-large": [
+          "Noto Serif"
+        ],
+        "heading-serif-large-bold": [
+          "Noto Serif"
+        ],
+        "heading-serif-xlarge": [
+          "Noto Serif"
+        ],
+        "heading-serif-xlarge-bold": [
+          "Noto Serif"
         ],
         "body-default": [
           "Inter"
         ],
-        "body-default-medium": [
+        "body-medium": [
           "Inter"
         ],
-        "body-default-bold": [
+        "body-bold": [
+          "Inter"
+        ],
+        "body-large": [
+          "Inter"
+        ],
+        "body-large-medium": [
+          "Inter"
+        ],
+        "body-large-bold": [
           "Inter"
         ],
         "body-serif": [
           "Noto Serif"
         ],
-        "caption": [
+        "body-serif-medium": [
+          "Noto Serif"
+        ],
+        "body-serif-bold": [
+          "Noto Serif"
+        ],
+        "body-serif-large": [
+          "Noto Serif"
+        ],
+        "body-serif-large-medium": [
+          "Noto Serif"
+        ],
+        "body-serif-large-bold": [
+          "Noto Serif"
+        ],
+        "caption-default": [
           "Inter"
         ],
         "caption-medium": [
@@ -296,183 +320,225 @@
         "caption-bold": [
           "Inter"
         ],
-        "caption-sm": [
+        "caption-small": [
+          "Inter"
+        ],
+        "caption-small-medium": [
+          "Inter"
+        ],
+        "caption-small-bold": [
+          "Inter"
+        ],
+        "body-para": [
+          "Inter"
+        ],
+        "body-para-bold": [
+          "Inter"
+        ],
+        "body-large-para": [
+          "Inter"
+        ],
+        "body-large-para-bold": [
+          "Inter"
+        ],
+        "body-serif-para": [
+          "Noto Serif"
+        ],
+        "body-serif-para-bold": [
+          "Noto Serif"
+        ],
+        "caption-para": [
+          "Inter"
+        ],
+        "caption-para-medium": [
+          "Inter"
+        ],
+        "caption-para-bold": [
+          "Inter"
+        ],
+        "caption-small-para": [
+          "Inter"
+        ],
+        "caption-small-para-medium": [
+          "Inter"
+        ],
+        "caption-small-para-bold": [
           "Inter"
         ],
         "label-text": [
           "Inter"
         ],
-        "button": [
+        "button-default": [
           "Inter"
         ]
       },
       "fontSize": {
-        "display-xl": [
-          "48px",
+        "display-sans-small": [
+          "32px",
           {
-            "letterSpacing": "-1.5px",
-            "fontWeight": "300"
+            "letterSpacing": "0px",
+            "fontWeight": "400"
           }
         ],
-        "display-xl-bold": [
-          "48px",
+        "display-sans-small-bold": [
+          "32px",
           {
-            "letterSpacing": "-1.5px",
-            "fontWeight": "600"
+            "letterSpacing": "0px",
+            "fontWeight": "700"
           }
         ],
-        "display-lg": [
+        "display-sans-large": [
           "40px",
           {
             "letterSpacing": "-0.5px",
             "fontWeight": "300"
           }
         ],
-        "display-lg-bold": [
+        "display-sans-large-bold": [
+          "40px",
+          {
+            "letterSpacing": "-0.5px",
+            "fontWeight": "700"
+          }
+        ],
+        "display-sans-xlarge": [
+          "48px",
+          {
+            "letterSpacing": "-1.5px",
+            "fontWeight": "300"
+          }
+        ],
+        "display-sans-xlarge-bold": [
+          "48px",
+          {
+            "letterSpacing": "-1.5px",
+            "fontWeight": "700"
+          }
+        ],
+        "display-serif-small": [
+          "32px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "400"
+          }
+        ],
+        "display-serif-small-bold": [
+          "32px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "600"
+          }
+        ],
+        "display-serif-large": [
+          "40px",
+          {
+            "letterSpacing": "-0.5px",
+            "fontWeight": "300"
+          }
+        ],
+        "display-serif-large-bold": [
           "40px",
           {
             "letterSpacing": "-0.5px",
             "fontWeight": "600"
           }
         ],
-        "display-sm": [
-          "32px",
+        "display-serif-xlarge": [
+          "48px",
           {
-            "letterSpacing": "0em",
-            "fontWeight": "400"
+            "letterSpacing": "-1.5px",
+            "fontWeight": "300"
           }
         ],
-        "display-sm-bold": [
-          "32px",
+        "display-serif-xlarge-bold": [
+          "48px",
           {
-            "letterSpacing": "0em",
+            "letterSpacing": "-1.5px",
             "fontWeight": "600"
           }
         ],
-        "heading-xl": [
-          "24px",
-          {
-            "letterSpacing": "0.25px",
-            "fontWeight": "400"
-          }
-        ],
-        "heading-xl-bold": [
-          "24px",
-          {
-            "letterSpacing": "0.25px",
-            "fontWeight": "700"
-          }
-        ],
-        "heading-lg": [
-          "20px",
-          {
-            "letterSpacing": "0em",
-            "fontWeight": "400"
-          }
-        ],
-        "heading-lg-bold": [
-          "20px",
-          {
-            "letterSpacing": "0em",
-            "fontWeight": "700"
-          }
-        ],
-        "heading-sm": [
+        "heading-sans-small": [
           "18px",
           {
             "letterSpacing": "0.15px",
             "fontWeight": "500"
           }
         ],
-        "heading-sm-bold": [
+        "heading-sans-small-bold": [
           "18px",
           {
             "letterSpacing": "0.15px",
             "fontWeight": "700"
           }
         ],
-        "subtitle-lg": [
-          "16px",
+        "heading-sans-large": [
+          "20px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "400"
+          }
+        ],
+        "heading-sans-large-bold": [
+          "20px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "700"
+          }
+        ],
+        "heading-sans-xlarge": [
+          "24px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "400"
+          }
+        ],
+        "heading-sans-xlarge-bold": [
+          "24px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "700"
+          }
+        ],
+        "heading-serif-small": [
+          "18px",
+          {
+            "letterSpacing": "0.15px",
+            "fontWeight": "500"
+          }
+        ],
+        "heading-serif-small-bold": [
+          "18px",
           {
             "letterSpacing": "0.15px",
             "fontWeight": "700"
           }
         ],
-        "paragraph-lg": [
-          "16px",
+        "heading-serif-large": [
+          "20px",
           {
-            "letterSpacing": "0em",
+            "letterSpacing": "0px",
             "fontWeight": "400"
           }
         ],
-        "paragraph-lg-bold": [
-          "16px",
+        "heading-serif-large-bold": [
+          "20px",
           {
-            "letterSpacing": "0em",
-            "fontWeight": "600"
-          }
-        ],
-        "paragraph-default": [
-          "14px",
-          {
-            "letterSpacing": "0.25px",
-            "fontWeight": "400"
-          }
-        ],
-        "paragraph-default-bold": [
-          "14px",
-          {
-            "letterSpacing": "0.25px",
-            "fontWeight": "600"
-          }
-        ],
-        "paragraph-serif": [
-          "14px",
-          {
-            "letterSpacing": "0.25px",
-            "fontWeight": "400"
-          }
-        ],
-        "paragraph-serif-bold": [
-          "14px",
-          {
-            "letterSpacing": "0.25px",
+            "letterSpacing": "0px",
             "fontWeight": "700"
           }
         ],
-        "caption-paragraph": [
-          "12px",
+        "heading-serif-xlarge": [
+          "24px",
           {
             "letterSpacing": "0.25px",
             "fontWeight": "400"
           }
         ],
-        "caption-paragraph-small": [
-          "10px",
+        "heading-serif-xlarge-bold": [
+          "24px",
           {
             "letterSpacing": "0.25px",
-            "fontWeight": "400"
-          }
-        ],
-        "body-lg": [
-          "16px",
-          {
-            "letterSpacing": "0em",
-            "fontWeight": "400"
-          }
-        ],
-        "body-lg-medium": [
-          "16px",
-          {
-            "letterSpacing": "0em",
-            "fontWeight": "500"
-          }
-        ],
-        "body-lg-bold": [
-          "16px",
-          {
-            "letterSpacing": "0em",
-            "fontWeight": "600"
+            "fontWeight": "700"
           }
         ],
         "body-default": [
@@ -482,18 +548,39 @@
             "fontWeight": "400"
           }
         ],
-        "body-default-medium": [
+        "body-medium": [
           "14px",
           {
             "letterSpacing": "0.25px",
             "fontWeight": "500"
           }
         ],
-        "body-default-bold": [
+        "body-bold": [
           "14px",
           {
             "letterSpacing": "0.25px",
-            "fontWeight": "600"
+            "fontWeight": "700"
+          }
+        ],
+        "body-large": [
+          "16px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-large-medium": [
+          "16px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "500"
+          }
+        ],
+        "body-large-bold": [
+          "16px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "700"
           }
         ],
         "body-serif": [
@@ -503,7 +590,42 @@
             "fontWeight": "400"
           }
         ],
-        "caption": [
+        "body-serif-medium": [
+          "14px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "500"
+          }
+        ],
+        "body-serif-bold": [
+          "14px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "700"
+          }
+        ],
+        "body-serif-large": [
+          "16px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-serif-large-medium": [
+          "16px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "500"
+          }
+        ],
+        "body-serif-large-bold": [
+          "16px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "600"
+          }
+        ],
+        "caption-default": [
           "12px",
           {
             "letterSpacing": "0.25px",
@@ -524,11 +646,109 @@
             "fontWeight": "700"
           }
         ],
-        "caption-sm": [
+        "caption-small": [
           "10px",
           {
             "letterSpacing": "0.25px",
             "fontWeight": "400"
+          }
+        ],
+        "caption-small-medium": [
+          "10px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "500"
+          }
+        ],
+        "caption-small-bold": [
+          "10px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "700"
+          }
+        ],
+        "body-para": [
+          "14px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-para-bold": [
+          "14px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "700"
+          }
+        ],
+        "body-large-para": [
+          "16px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-large-para-bold": [
+          "16px",
+          {
+            "letterSpacing": "0px",
+            "fontWeight": "700"
+          }
+        ],
+        "body-serif-para": [
+          "14px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-serif-para-bold": [
+          "14px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "700"
+          }
+        ],
+        "caption-para": [
+          "12px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "400"
+          }
+        ],
+        "caption-para-medium": [
+          "12px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "500"
+          }
+        ],
+        "caption-para-bold": [
+          "12px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "700"
+          }
+        ],
+        "caption-small-para": [
+          "10px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "400"
+          }
+        ],
+        "caption-small-para-medium": [
+          "10px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "500"
+          }
+        ],
+        "caption-small-para-bold": [
+          "10px",
+          {
+            "letterSpacing": "0.25px",
+            "fontWeight": "700"
           }
         ],
         "label-text": [
@@ -538,7 +758,7 @@
             "fontWeight": "700"
           }
         ],
-        "button": [
+        "button-default": [
           "14px",
           {
             "letterSpacing": "0.5px",
