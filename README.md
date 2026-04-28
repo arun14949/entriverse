@@ -91,4 +91,6 @@ Things on the list, not yet built:
 
 ## License
 
-Proprietary. Internal Entri use only.
+Released under the [MIT License](LICENSE). Use, fork, and learn from it freely.
+
+"Entri" and "EntriVerse" are trademarks of Entri. The MIT license does not grant rights to use these names or Entri's brand identity to identify other products or services.
