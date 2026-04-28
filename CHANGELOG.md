@@ -2,6 +2,21 @@
 
 All notable changes to EntriVerse are documented here. Format follows [Keep a Changelog](https://keepachangelog.com).
 
+## [1.1.0] - 2026-04-28
+
+Replace the Material 2 elevation ladder with EntriVerse's own shadow scale, extracted directly from the Figma effect styles.
+
+### Added
+
+- `elevation:` block in the YAML front matter with nine named levels (`level-0` through `level-24`). Each level is a CSS-ready box-shadow string composed of two or three layered drop shadows.
+
+### Changed
+
+- Shadow alphas dropped from Material 2's 14 / 12 / 20% to EntriVerse's 10 / 6 / 8% for a softer, less-weighty depth cue.
+- Offset / blur ratios adjusted per level to match the Figma source. For example, Level 1 was Material 2's `(0,1,1) + (0,2,1,-1) + (0,1,3)`; it is now `(0,1,3) + (0,2,1) + (0,1,1)` — a more pronounced primary shadow with calmer ambient layers.
+- Prose section "Elevation & Depth" rewritten to reference the new tokens by name and document the divergence from Material 2.
+- Light and Dark modes still share the same shadow stack (no per-mode override).
+
 ## [1.0.0] - 2026-04-28
 
 Realign reference-token names and structure with the EntriVerse Figma source-of-truth (`KjZWlCkNvEKuOnfPMXxqS9`). **Breaking change** — anything consuming the old token names must update.

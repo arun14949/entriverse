@@ -303,6 +303,17 @@ spacing:
   7xl: 64px
   8xl: 120px
 
+elevation:
+  level-0: "0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 1px 0px rgba(0, 0, 0, 0.25)"
+  level-1: "0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 2px 1px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.08)"
+  level-2: "0px 1px 5px 0px rgba(0, 0, 0, 0.10), 0px 3px 1px 0px rgba(0, 0, 0, 0.06), 0px 2px 2px 0px rgba(0, 0, 0, 0.08)"
+  level-4: "0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 1px 10px 0px rgba(0, 0, 0, 0.06), 0px 4px 5px 0px rgba(0, 0, 0, 0.08)"
+  level-6: "0px 3px 5px 0px rgba(0, 0, 0, 0.10), 0px 1px 18px 0px rgba(0, 0, 0, 0.06), 0px 6px 10px 0px rgba(0, 0, 0, 0.08)"
+  level-8: "0px 5px 5px 0px rgba(0, 0, 0, 0.10), 0px 3px 14px 0px rgba(0, 0, 0, 0.06), 0px 8px 10px 0px rgba(0, 0, 0, 0.08)"
+  level-12: "0px 7px 8px 0px rgba(0, 0, 0, 0.10), 0px 5px 22px 0px rgba(0, 0, 0, 0.06), 0px 12px 17px 0px rgba(0, 0, 0, 0.08)"
+  level-16: "0px 8px 10px 0px rgba(0, 0, 0, 0.10), 0px 6px 30px 0px rgba(0, 0, 0, 0.06), 0px 16px 24px 0px rgba(0, 0, 0, 0.08)"
+  level-24: "0px 11px 15px 0px rgba(0, 0, 0, 0.10), 0px 9px 46px 0px rgba(0, 0, 0, 0.06), 0px 24px 38px 0px rgba(0, 0, 0, 0.08)"
+
 components:
   button-filled:
     backgroundColor: "{colors.primary}"
@@ -646,11 +657,13 @@ Stay on the scale. 10px, 14px, 20px are not EntriVerse values.
 
 ## Elevation & Depth
 
-EntriVerse uses **Material 2 elevation**. Nine levels (`0, 1, 2, 4, 6, 8, 12, 16, 24`) corresponding to Material 2 dp values, each composed of three layered drop shadows for natural depth. Both Light and Dark modes have the full ladder.
+EntriVerse defines **nine elevation levels** (`0, 1, 2, 4, 6, 8, 12, 16, 24`), each composed of two-to-three layered drop shadows. The dp scale comes from Material 2 — but the shadow values themselves are EntriVerse-specific and **softer** than Material 2's defaults. Where Material 2 stacks alphas at 14% / 12% / 20%, EntriVerse uses **10% / 6% / 8%** for a calmer, less weighty depth cue. Light and Dark modes share the same shadow stack — the perceived effect is naturally softer in Dark Mode because the surface beneath is already near-black.
 
-Pick a level by Material 2 convention: cards at Level 1, raised surfaces and selection states at Level 2, FABs and snackbars at Level 6, navigation drawers and side sheets at Level 16, modal dialogs at Level 24. Do not drop heavy shadows on inline cards to add visual importance — use `secondary-container` fill or a border instead.
+Pick a level by purpose: cards at Level 1, raised surfaces and selection states at Level 2, FABs and snackbars at Level 6, navigation drawers and side sheets at Level 16, modal dialogs at Level 24. Do not drop heavy shadows on inline cards to add visual importance — use `secondary-container` fill or a border instead.
 
 Tooltips and snackbars use `inverted-bg-default` (`#121212`) even in Light Mode to float cleanly above any surface layer.
+
+Consume by name: `elevation.level-0` through `elevation.level-24`. Never hand-write a `box-shadow` value.
 
 ## Shapes
 
@@ -813,7 +826,7 @@ Mode-dependent overlays flip their underlying color: `overlay-dark-N` becomes `r
 
 ### Elevation in Dark Mode
 
-Material 2 shadow values do not change between modes. The perceived effect is softer on dark surfaces because the surfaces are already close to black, which is fine.
+EntriVerse shadow values do not change between modes — the same nine-level ladder applies. The perceived effect is softer on dark surfaces because the surfaces are already close to black, which is fine.
 
 ## Do's and Don'ts
 
