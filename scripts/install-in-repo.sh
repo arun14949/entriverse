@@ -5,31 +5,18 @@
 #   /plugin install entriverse@entriverse
 # This script remains for older Claude Code setups, Cursor, and Copilot.
 #
-# Private repo — GITHUB_TOKEN must be set in your environment with at least
-# read:repo scope on arun14949/entriverse.
-#
 # Run from the root of the consuming repo.
 #
-# Direct usage (with token in env):
-#   curl -sL -H "Authorization: token $GITHUB_TOKEN" \
-#     https://raw.githubusercontent.com/arun14949/entriverse/main/scripts/install-in-repo.sh | bash
+# Direct usage:
+#   curl -sL https://raw.githubusercontent.com/arun14949/entriverse/main/scripts/install-in-repo.sh | bash
 #
 # Or from a local clone:
 #   /path/to/entriverse/scripts/install-in-repo.sh
 
 set -e
 
-if [ -z "$GITHUB_TOKEN" ]; then
-  echo "Error: GITHUB_TOKEN env var not set. The EntriVerse repo is private; you"
-  echo "need a GitHub PAT with 'repo' (or 'read:repo') scope on arun14949/entriverse."
-  echo ""
-  echo "  export GITHUB_TOKEN=ghp_yourPersonalAccessToken"
-  echo ""
-  exit 1
-fi
-
-# Allow override via env var. Default to the canonical repo URL with token auth.
-ENTRIVERSE_REPO="${ENTRIVERSE_REPO:-https://${GITHUB_TOKEN}@github.com/arun14949/entriverse.git}"
+# Allow override via env var. Default to the canonical repo URL.
+ENTRIVERSE_REPO="${ENTRIVERSE_REPO:-https://github.com/arun14949/entriverse.git}"
 ENTRIVERSE_BRANCH="${ENTRIVERSE_BRANCH:-main}"
 
 if [ ! -d ".git" ]; then
@@ -40,7 +27,7 @@ fi
 TMPDIR=$(mktemp -d)
 trap "rm -rf $TMPDIR" EXIT
 
-echo "Fetching latest skill from arun14949/entriverse..."
+echo "Fetching latest skill from $ENTRIVERSE_REPO..."
 git clone --depth 1 --branch "$ENTRIVERSE_BRANCH" "$ENTRIVERSE_REPO" "$TMPDIR/entriverse" 2>&1 | tail -3
 
 mkdir -p .claude/skills

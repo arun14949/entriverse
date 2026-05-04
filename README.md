@@ -4,7 +4,7 @@ The internal design system for Entri. Source of truth for tokens, components, ty
 
 This repo is the canonical home for the EntriVerse spec and ships as a **Claude Code marketplace plugin** so AI tools generate UI that matches the system without you pasting the spec into every prompt.
 
-> **Private repo.** Internal Entri use only. See [LICENSE](LICENSE).
+> **License:** Proprietary. Internal Entri use only. Public visibility for collaboration; not for redistribution. See [LICENSE](LICENSE).
 
 ## What's in here
 
@@ -40,27 +40,16 @@ For both, also install the AI plugin (next section) so Claude Code, Cursor, or C
 
 ## Installing the AI plugin
 
-This is a private GitHub repo. You need a GitHub Personal Access Token (PAT) with `repo` scope on this org/account before any of the install paths will work.
-
-### One-time: set GITHUB_TOKEN
-
-```bash
-# Add to your shell profile (~/.zshrc, ~/.bashrc, etc.)
-export GITHUB_TOKEN=ghp_yourPersonalAccessToken
-```
-
-The token needs at least `repo` (or `read:repo`) scope. Restart your shell after adding it.
-
 ### Claude Code (recommended)
 
-Inside any Claude Code session:
+Inside any Claude Code session, run:
 
 ```
 /plugin marketplace add arun14949/entriverse
 /plugin install entriverse@entriverse
 ```
 
-Claude Code uses the `GITHUB_TOKEN` env var to clone the private marketplace. The skill becomes available as `/entriverse:entriverse` and triggers automatically when you build Entri UI.
+That's it. The skill becomes available as `/entriverse:entriverse` and Claude triggers it automatically whenever you build Entri UI.
 
 To pull the latest spec after a release:
 
@@ -70,12 +59,12 @@ To pull the latest spec after a release:
 
 ### Manual install (Cursor, Copilot, older Claude Code)
 
-For tools without the Claude Code plugin manager.
+For tools without the Claude Code plugin manager, copy the raw skill folder.
 
 **Personal install (works across all your repos):**
 
 ```bash
-git clone git@github.com:arun14949/entriverse.git ~/entriverse  # SSH; needs your GitHub key on the account
+git clone https://github.com/arun14949/entriverse.git ~/entriverse
 mkdir -p ~/.claude/skills
 cp -r ~/entriverse/skills/entriverse ~/.claude/skills/entriverse
 ```
@@ -83,14 +72,12 @@ cp -r ~/entriverse/skills/entriverse ~/.claude/skills/entriverse
 **Per-repo install (commit the skill into your product repo):**
 
 ```bash
-# From inside an Entri product repo, with GITHUB_TOKEN set:
-GITHUB_TOKEN=$GITHUB_TOKEN bash -c 'curl -sL -H "Authorization: token $GITHUB_TOKEN" \
-  https://raw.githubusercontent.com/arun14949/entriverse/main/scripts/install-in-repo.sh | bash'
+curl -sL https://raw.githubusercontent.com/arun14949/entriverse/main/scripts/install-in-repo.sh | bash
 git add .claude/skills/entriverse
 git commit -m "Add EntriVerse skill"
 ```
 
-The script clones the repo over HTTPS using `GITHUB_TOKEN`. Without the token, the curl will return a 404.
+After install, anyone on the team gets the skill automatically when they clone the product repo.
 
 ## Updating the spec
 
@@ -128,6 +115,6 @@ Things on the list, not yet built:
 
 ## License
 
-Proprietary. Copyright © 2026 Entri. All rights reserved. Internal use only — not for redistribution outside the Entri organization. See [LICENSE](LICENSE).
+Proprietary. Copyright © 2026 Entri. All rights reserved. The repo is publicly visible to make collaboration with internal team and contractors easier; that visibility is not a grant of use rights. Internal Entri use only — not for redistribution outside the Entri organization. See [LICENSE](LICENSE).
 
 "Entri" and "EntriVerse" are trademarks of Entri.
