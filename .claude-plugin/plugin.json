@@ -1,0 +1,11 @@
+{
+  "name": "entriverse",
+  "version": "2.1.0",
+  "description": "EntriVerse design system spec for Entri — design tokens, components, typography, color, spacing, elevation, and dark mode rules. Use whenever building UI for Entri products.",
+  "author": {
+    "name": "Arun Sajeev"
+  },
+  "homepage": "https://github.com/arun14949/entriverse",
+  "repository": "https://github.com/arun14949/entriverse",
+  "license": "MIT"
+}

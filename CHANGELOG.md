@@ -2,6 +2,27 @@
 
 All notable changes to EntriVerse are documented here. Format follows [Keep a Changelog](https://keepachangelog.com).
 
+## [2.1.0] - 2026-04-29
+
+Package the EntriVerse skill as a Claude Code marketplace plugin so it can be installed with two slash commands instead of a manual `cp -r`.
+
+### Added
+
+- `.claude-plugin/plugin.json` — plugin manifest with `name: entriverse`, `version: 2.1.0`, author, repo, license.
+- `.claude-plugin/marketplace.json` — single-plugin marketplace manifest. The repo is now a self-contained marketplace listing the EntriVerse plugin.
+- New install path documented in README: `/plugin marketplace add arun14949/entriverse` followed by `/plugin install entriverse@entriverse`. The skill is invoked as `/entriverse:entriverse` after install.
+
+### Changed
+
+- Skill folder renamed from `skill/` (singular) to `skills/entriverse/` to match the Claude Code plugin convention. `git mv` preserves history.
+- `scripts/sync.sh` updated to read/write the new `skills/entriverse/references/entriverse.md` path. Lint behaviour unchanged.
+- `scripts/install-personal.sh` and `scripts/install-in-repo.sh` updated to source from `skills/entriverse/`. Both flagged as legacy in their headers — they're for tools without Claude Code's plugin manager (Cursor, Copilot, older setups). New users should prefer the marketplace install.
+- README install section restructured: marketplace install is now the primary path; manual `cp -r` install moved to a "Manual install" subsection for non-Claude-Code consumers.
+
+### Note
+
+Spec content is unchanged — this is a packaging release. No token names or values changed; product code consuming the spec needs no updates.
+
 ## [2.0.0] - 2026-04-28
 
 Sweeping realignment with the EntriVerse Figma source-of-truth (file `KjZWlCkNvEKuOnfPMXxqS9`, Kigen variables export). Two structural changes — both **breaking**.

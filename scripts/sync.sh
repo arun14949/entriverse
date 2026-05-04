@@ -6,14 +6,14 @@ set -e
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SPEC="$REPO_ROOT/entriverse.md"
-SKILL_SPEC="$REPO_ROOT/skill/references/entriverse.md"
+SKILL_SPEC="$REPO_ROOT/skills/entriverse/references/entriverse.md"
 
 if [ ! -f "$SPEC" ]; then
   echo "Error: $SPEC not found"
   exit 1
 fi
 
-echo "Syncing skill/references/entriverse.md from root..."
+echo "Syncing skills/entriverse/references/entriverse.md from root..."
 cp "$SPEC" "$SKILL_SPEC"
 
 echo "Regenerating exports..."
@@ -33,7 +33,7 @@ fi
 
 echo "Done. Skill, exports, and lint all in sync."
 echo "Files updated:"
-echo "  skill/references/entriverse.md"
+echo "  skills/entriverse/references/entriverse.md"
 echo "  exports/entriverse.tokens.json"
 echo "  exports/entriverse.tailwind.json"
 echo ""

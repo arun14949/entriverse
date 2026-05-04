@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-# Install the EntriVerse skill into the current Entri product repo.
+# LEGACY install path — copies the raw skill into a consuming repo's
+# .claude/skills/entriverse folder. For Claude Code users, prefer:
+#   /plugin marketplace add arun14949/entriverse
+#   /plugin install entriverse@entriverse
+# This script remains for older Claude Code setups, Cursor, and Copilot.
+#
 # Run from the root of the consuming repo.
 #
 # Direct usage:
@@ -32,7 +37,7 @@ if [ -d ".claude/skills/entriverse" ]; then
   rm -rf ".claude/skills/entriverse"
 fi
 
-cp -r "$TMPDIR/entriverse/skill" ".claude/skills/entriverse"
+cp -r "$TMPDIR/entriverse/skills/entriverse" ".claude/skills/entriverse"
 
 echo ""
 echo "Installed at .claude/skills/entriverse"

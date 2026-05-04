@@ -1,0 +1,13 @@
+{
+  "name": "entriverse",
+  "owner": {
+    "name": "Arun Sajeev"
+  },
+  "plugins": [
+    {
+      "name": "entriverse",
+      "source": ".",
+      "description": "EntriVerse design system for Entri — tokens, components, typography, dark mode."
+    }
+  ]
+}
