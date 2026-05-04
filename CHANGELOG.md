@@ -23,6 +23,8 @@ Package the EntriVerse skill as a Claude Code marketplace plugin so it can be in
 
 Spec content is unchanged — this is a packaging release. No token names or values changed; product code consuming the spec needs no updates.
 
+The repo and license also switched from public/MIT to **private/proprietary** in this release. Internal Entri use only. See `LICENSE`. Plugin install paths now require `GITHUB_TOKEN` to be set in the environment with `repo` scope; the README install section documents this.
+
 ## [2.0.0] - 2026-04-28
 
 Sweeping realignment with the EntriVerse Figma source-of-truth (file `KjZWlCkNvEKuOnfPMXxqS9`, Kigen variables export). Two structural changes — both **breaking**.

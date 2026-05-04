@@ -1,8 +1,10 @@
 # EntriVerse
 
-The design system for Entri. Source of truth for tokens, components, typography, color, spacing, elevation, and dark mode rules across web, Android, and iOS. Supports 11+ regional Indian languages.
+The internal design system for Entri. Source of truth for tokens, components, typography, color, spacing, elevation, and dark mode rules across web, Android, and iOS. Supports 11+ regional Indian languages.
 
-This repo is the canonical home for the EntriVerse spec and ships as a **Claude Code marketplace plugin** so AI tools generate UI that matches the system without you pasting it into every prompt.
+This repo is the canonical home for the EntriVerse spec and ships as a **Claude Code marketplace plugin** so AI tools generate UI that matches the system without you pasting the spec into every prompt.
+
+> **Private repo.** Internal Entri use only. See [LICENSE](LICENSE).
 
 ## What's in here
 
@@ -38,16 +40,27 @@ For both, also install the AI plugin (next section) so Claude Code, Cursor, or C
 
 ## Installing the AI plugin
 
+This is a private GitHub repo. You need a GitHub Personal Access Token (PAT) with `repo` scope on this org/account before any of the install paths will work.
+
+### One-time: set GITHUB_TOKEN
+
+```bash
+# Add to your shell profile (~/.zshrc, ~/.bashrc, etc.)
+export GITHUB_TOKEN=ghp_yourPersonalAccessToken
+```
+
+The token needs at least `repo` (or `read:repo`) scope. Restart your shell after adding it.
+
 ### Claude Code (recommended)
 
-Inside any Claude Code session, run:
+Inside any Claude Code session:
 
 ```
 /plugin marketplace add arun14949/entriverse
 /plugin install entriverse@entriverse
 ```
 
-That's it. The skill becomes available as `/entriverse:entriverse` and Claude will trigger it automatically whenever you build Entri UI.
+Claude Code uses the `GITHUB_TOKEN` env var to clone the private marketplace. The skill becomes available as `/entriverse:entriverse` and triggers automatically when you build Entri UI.
 
 To pull the latest spec after a release:
 
@@ -57,12 +70,12 @@ To pull the latest spec after a release:
 
 ### Manual install (Cursor, Copilot, older Claude Code)
 
-For tools without the Claude Code plugin manager, copy the raw skill folder.
+For tools without the Claude Code plugin manager.
 
 **Personal install (works across all your repos):**
 
 ```bash
-git clone https://github.com/arun14949/entriverse.git ~/entriverse
+git clone git@github.com:arun14949/entriverse.git ~/entriverse  # SSH; needs your GitHub key on the account
 mkdir -p ~/.claude/skills
 cp -r ~/entriverse/skills/entriverse ~/.claude/skills/entriverse
 ```
@@ -70,12 +83,14 @@ cp -r ~/entriverse/skills/entriverse ~/.claude/skills/entriverse
 **Per-repo install (commit the skill into your product repo):**
 
 ```bash
-curl -sL https://raw.githubusercontent.com/arun14949/entriverse/main/scripts/install-in-repo.sh | bash
+# From inside an Entri product repo, with GITHUB_TOKEN set:
+GITHUB_TOKEN=$GITHUB_TOKEN bash -c 'curl -sL -H "Authorization: token $GITHUB_TOKEN" \
+  https://raw.githubusercontent.com/arun14949/entriverse/main/scripts/install-in-repo.sh | bash'
 git add .claude/skills/entriverse
 git commit -m "Add EntriVerse skill"
 ```
 
-After install, anyone on the team gets the skill automatically when they clone.
+The script clones the repo over HTTPS using `GITHUB_TOKEN`. Without the token, the curl will return a 404.
 
 ## Updating the spec
 
@@ -87,17 +102,17 @@ The skill folder duplicates the root spec file (Claude Code reads from inside th
 
 This copies the spec into the skill, regenerates the JSON exports, and runs the linter. Commit the result. If you forget, the included pre-commit-style check in `sync.sh` will warn you.
 
-When bumping the spec version, also bump `.claude-plugin/plugin.json` so installed plugins update on the next `/plugin marketplace update`.
+When bumping the spec version, also bump `version` in `.claude-plugin/plugin.json` so installed plugins update on the next `/plugin marketplace update`.
 
 ## Contributing
 
-The spec evolves with the design system. Anyone on the design team can open a PR.
+Internal contribution flow.
 
 1. Edit `entriverse.md` at the root. Always edit there, never inside `skills/entriverse/references/`.
 2. Run `./scripts/sync.sh` to propagate changes.
 3. Commit and push. Open a PR.
-4. At minimum, the design system owner reviews. Engineering can review tokens that affect their consumption.
-5. Update `CHANGELOG.md` with a one-line summary of the change. Bump `version` in `.claude-plugin/plugin.json` to match.
+4. The design system owner reviews. Engineering reviews tokens that affect their consumption.
+5. Update `CHANGELOG.md` with a one-line summary. Bump `version` in `.claude-plugin/plugin.json` to match.
 
 For larger changes (new component, breaking token rename), bump the version in `CHANGELOG.md` and announce in the design team Slack so engineering can pull updates intentionally.
 
@@ -113,6 +128,6 @@ Things on the list, not yet built:
 
 ## License
 
-Released under the [MIT License](LICENSE). Use, fork, and learn from it freely.
+Proprietary. Copyright © 2026 Entri. All rights reserved. Internal use only — not for redistribution outside the Entri organization. See [LICENSE](LICENSE).
 
-"Entri" and "EntriVerse" are trademarks of Entri. The MIT license does not grant rights to use these names or Entri's brand identity to identify other products or services.
+"Entri" and "EntriVerse" are trademarks of Entri.
