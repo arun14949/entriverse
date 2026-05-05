@@ -2,6 +2,12 @@
 
 All notable changes to EntriVerse are documented here. Format follows [Keep a Changelog](https://keepachangelog.com).
 
+## [2.1.2] - 2026-05-05
+
+### Fixed
+
+- `marketplace.json` plugin source switched from the relative-path form (`"source": "."`) to the explicit GitHub form (`"source": { "source": "github", "repo": "arun14949/entriverse" }`). The relative-path source is newer and not supported by older Claude Code versions, which produced "this plugin uses a source type your Claude Code version does not support" on install. The GitHub object form is broadly supported and works without requiring teammates to update Claude Code first.
+
 ## [2.1.1] - 2026-05-04
 
 ### Fixed

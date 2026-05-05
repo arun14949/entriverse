@@ -6,7 +6,10 @@
   "plugins": [
     {
       "name": "entriverse",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "arun14949/entriverse"
+      },
       "description": "EntriVerse design system for Entri — tokens, components, typography, dark mode."
     }
   ]
