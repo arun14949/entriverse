@@ -2,6 +2,17 @@
 
 All notable changes to EntriVerse are documented here. Format follows [Keep a Changelog](https://keepachangelog.com).
 
+## [2.1.3] - 2026-05-05
+
+### Fixed
+
+- Checkbox inactive states now flip correctly in dark mode. Same fix as Radio in v2.1.1: `checkbox-inactive.textColor` and `checkbox-inactive-hover.textColor` previously referenced primitives (`grey-50`, `grey-80`) which don't flip with the cascade. Now reference `placeholder-icon` and `secondary-icon` — Light/Dark values match Figma exactly (light: grey-50/grey-80, dark: grey-100/grey-70).
+
+### Added
+
+- `checkbox-indeterminate` and `checkbox-indeterminate-disabled` component tokens. Indeterminate is the partial-selection state used in "select all" patterns where some-but-not-all children are checked. Visually it shares the active fill (primary blue background) but renders a horizontal dash instead of a check; the disabled variant uses the disabled fill.
+- Selection controls prose section now documents the indeterminate state and its `checkbox-indeterminate` token shape.
+
 ## [2.1.2] - 2026-05-05
 
 ### Fixed

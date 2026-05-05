@@ -1,6 +1,6 @@
 {
   "name": "entriverse",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "EntriVerse design system spec for Entri — design tokens, components, typography, color, spacing, elevation, and dark mode rules. Internal use only. Apply whenever building UI for Entri products.",
   "author": {
     "name": "Arun Sajeev"

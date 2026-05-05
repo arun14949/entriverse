@@ -476,11 +476,17 @@ components:
     textColor: "{colors.on-primary}"
   checkbox-inactive:
     backgroundColor: "{colors.background-default}"
-    textColor: "{colors.grey-50}"
+    textColor: "{colors.placeholder-icon}"
   checkbox-inactive-hover:
     backgroundColor: "{colors.background-default}"
-    textColor: "{colors.grey-80}"
+    textColor: "{colors.secondary-icon}"
   checkbox-disabled:
+    backgroundColor: "{colors.background-default}"
+    textColor: "{colors.disabled-text}"
+  checkbox-indeterminate:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+  checkbox-indeterminate-disabled:
     backgroundColor: "{colors.background-default}"
     textColor: "{colors.disabled-text}"
 
@@ -711,7 +717,9 @@ Do not mix radius families within a visual group. A button (`full`) inside a car
 
 **Cards** come in two variants — `card` (white) for prominent content, `card-secondary` (grey) for supporting content. Padding 16px.
 
-**Selection controls** (radio, checkbox, switch) use `primary` for active and `grey-50` for inactive. The switch uniquely uses `entri-blue` (the identity color, not `primary`) for its active track.
+**Selection controls** (radio, checkbox, switch) use `primary` for active and `placeholder-icon` for inactive (which carries grey-50 in Light, grey-100 in Dark — flipping correctly with the theme). The switch uniquely uses `entri-blue` (the identity color, not `primary`) for its active track.
+
+**Checkbox** has an additional `checkbox-indeterminate` state for partially-selected groups (the "select all" pattern when only some children are selected). Visually it shares the active fill (filled blue background) but renders a horizontal dash instead of a check. Tokens: `checkbox-indeterminate` (active fill) and `checkbox-indeterminate-disabled` (disabled fill).
 
 **Selection tiles** (plan chooser, quiz options, preference cards) use `selection-active` when chosen, `selection-inactive` otherwise. The gold variant is reserved for premium plan selection.
 
