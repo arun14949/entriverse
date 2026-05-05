@@ -460,10 +460,10 @@ components:
     textColor: "{colors.on-primary}"
   radio-inactive:
     backgroundColor: "{colors.background-default}"
-    textColor: "{colors.grey-50}"
+    textColor: "{colors.placeholder-icon}"
   radio-inactive-hover:
     backgroundColor: "{colors.background-default}"
-    textColor: "{colors.grey-80}"
+    textColor: "{colors.secondary-icon}"
   radio-disabled:
     backgroundColor: "{colors.background-default}"
     textColor: "{colors.disabled-text}"

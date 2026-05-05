@@ -2,6 +2,12 @@
 
 All notable changes to EntriVerse are documented here. Format follows [Keep a Changelog](https://keepachangelog.com).
 
+## [2.1.1] - 2026-05-04
+
+### Fixed
+
+- Radio button inactive states now flip correctly in dark mode. `radio-inactive.textColor` and `radio-inactive-hover.textColor` previously referenced primitives (`grey-50`, `grey-80`) directly, which both leaked the primitive layer into the component layer **and** prevented the cascade from flipping their value in dark mode. They now reference `placeholder-icon` and `secondary-icon` respectively — reference tokens that carry the matching Light/Dark values per Figma (light: grey-50/grey-80, dark: grey-100/grey-70).
+
 ## [2.1.0] - 2026-04-29
 
 Package the EntriVerse skill as a Claude Code marketplace plugin so it can be installed with two slash commands instead of a manual `cp -r`.
